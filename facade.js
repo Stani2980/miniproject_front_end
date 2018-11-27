@@ -1,6 +1,6 @@
 import { handleHttpErrors, makeFetchOptions } from './fetchReduce';
 
-const URL = "http://f04474f6.ngrok.io/api/"
+const URL = "https://stanitech.dk/friendfinder/api"
 const login = async (username, password, longitude, latitude, distance, pushToken) => {
     const body = { username, password, longitude, latitude, distance, pushToken }
     console.log('For testing notifications : ' + JSON.stringify(body))
@@ -12,7 +12,7 @@ const login = async (username, password, longitude, latitude, distance, pushToke
 }
 
 const getGame = async (longitude, latitude) => {
-    const gamearea = await fetch(`${URL}position/gamearea`, makeFetchOptions('POST', { longitude, latitude })).then(handleHttpErrors)
+    const gamearea = await fetch(`${URL}/position/gamearea`, makeFetchOptions('POST', { longitude, latitude })).then(handleHttpErrors)
     return gamearea;
 }
 

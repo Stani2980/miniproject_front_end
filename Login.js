@@ -34,8 +34,6 @@ class Login extends Component {
           placeholder="Username"
           placeholderTextColor="#9a73ef"
           autoCapitalize="none"
-          ///// REMOVE DEFAULT AFTER TESTTING
-          value='test'
           onChangeText={this.handleUsername} />
 
         <TextInput style={styles.input}
@@ -45,8 +43,6 @@ class Login extends Component {
           placeholderTextColor="#9a73ef"
           autoCapitalize="none"
           onChangeText={this.handlePassword}
-          ///// REMOVE DEFAULT AFTER TESTTING
-          value='test'
           secureTextEntry />
 
         <TextInput style={styles.input}
